@@ -1,0 +1,20 @@
+name: "Featherweight"
+license: "MIT"
+licenselink: "https://github.com/red/hugo-featherweight/blob/master/LICENSE.md"
+description: "Base Hugo theme for websites related to the Red language."
+homepage: "https://github.com/red/hugo-featherweight"
+tags:
+  - "blog"
+  - "responsive"
+  - "widgets"
+  - "rss"
+features:
+  - "blog"
+  - "responsive"
+  - "widgets"
+  - "rss"
+min_version: "0.40"
+
+author:
+  name: "Grayscale Digital"
+  homepage: "https://grayscale.digital"
