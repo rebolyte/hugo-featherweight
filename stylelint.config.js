@@ -1,5 +1,6 @@
 module.exports = {
-	extends: 'stylelint-config-standard',
+	// https://github.com/stylelint/stylelint/issues/1973#issuecomment-264695959
+	extends: require.resolve('stylelint-config-standard'),
 	rules: {
 		'at-rule-empty-line-before': null,
 		'at-rule-no-unknown': [
