@@ -100,6 +100,7 @@ module.exports = {
 			new PurgeCssPlugin({
 				paths: glob.sync([
 					path.join(paths.CWD, 'layouts/**/*.html'),
+					path.join(paths.CWD, 'content/**/*.{md,html}'),
 					path.join(paths.SRC, 'js', '/**/*.{js,ts}')
 				]),
 				extractors: [

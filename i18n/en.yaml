@@ -5,9 +5,9 @@ ecosystem:
 language:
   other: Language
 about:
-  other: About Red
+  other: About Fullstack
 subscribe:
-  other: Subscribe
+  other: Stay Updated on Red
 submitBtn:
   other: Submit
 postedTo:

@@ -127,6 +127,7 @@ let colors = {
 	'pink-lighter': '#ffbbca',
 	'pink-lightest': '#ffebef',
 
+	// red site
 	'rl-off-black': '#1B1B24',
 	'rl-deep-blue': '#202132',
 	'rl-med-blue': '#344360',
@@ -136,7 +137,11 @@ let colors = {
 	'rl-gray': '#999999',
 	'rl-gray-lighter': '#eee',
 	'rl-gray-lightest': '#e4e4e4',
-	'rl-gold': '#ecbb34'
+	'rl-gold': '#ecbb34',
+
+	// fullstack
+	'rl-golden': '#eec862',
+	'rl-golden-darker': '#d99733'
 };
 
 module.exports = {
