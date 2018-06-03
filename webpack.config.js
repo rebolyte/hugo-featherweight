@@ -108,7 +108,11 @@ module.exports = {
 						extractor: TailwindExtractor,
 						extensions: ['html', 'js', 'ts']
 					}
-				]
+				],
+				// Target all classes here that are dynamically assembled somewhere in a template,
+				// e.g. with `grid-columns-{{ .Params.num_cols }}`
+				// TODO: Revisit this!
+				whitelistPatterns: () => [/grid-columns/]
 			})
 		),
 		new WebpackAssetsManifest({
