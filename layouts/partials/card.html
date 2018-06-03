@@ -1,4 +1,9 @@
 <div class="card max-w-2xs">
+	{{ with .thumbnail }}
+		<div class="text-center">
+			<div class="h-32 bg-center bg-no-repeat bg-contain" style="background-image: url('{{ . }}');"></div>
+		</div>
+	{{ end }}
 	<div class="card-title rl-ctr-title-underline">{{ .title }}</div>
 	<p class="px-2 pb-8 text-center text-rl-gray">{{ .description }}</p>
 	<div class="text-center">
