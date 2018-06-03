@@ -27,8 +27,6 @@ const paths = {
 	SITE: path.resolve(__dirname, '../..')
 };
 
-console.log('THE SITE IS', paths.SITE);
-
 // Custom PurgeCSS extractor for Tailwind that allows special characters in class names.
 class TailwindExtractor {
 	static extract(content) {
