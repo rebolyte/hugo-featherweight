@@ -1,0 +1,17 @@
+<section class="py-4">
+	<div class="container mx-auto mt-12 flex flex-col items-center">
+		<!-- Necessary evil: We need the full class names that we'll somewhere, or css-purge will...purge them -->
+		<!-- lg:grid-columns-4 -->
+		<div class="grid grid-columns-1 grid-gap-xs sm:grid-columns-{{ div .Params.num_cols 2 }} sm:grid-gap-sm lg:grid-columns-{{ .Params.num_cols }} lg:grid-gap-lg grid-justify-center">
+			{{ range .Params.cards }}
+				<div class="card max-w-2xs">
+					<div class="card-title rl-ctr-title-underline">{{ .title }}</div>
+					<p class="px-2 pb-8 text-center text-rl-gray">{{ .description }}</p>
+					<div class="text-center">
+						<a href="{{ .buttonUrl }}" class="red-btn-outline mx-auto">{{ .buttonText }}</a>
+					</div>
+				</div>
+			{{ end }}
+		</div>
+	</div>
+</section>

@@ -523,6 +523,7 @@ module.exports = {
 		'32': '8rem',
 		'48': '12rem',
 		'64': '16rem',
+		'80': '20rem',
 		full: '100%',
 		screen: '100vh'
 	},
@@ -606,6 +607,9 @@ module.exports = {
   */
 
 	maxWidth: {
+		'4xs': '10rem',
+		'3xs': '15rem',
+		'2xs': '17.5rem',
 		xs: '20rem',
 		sm: '30rem',
 		md: '40rem',
@@ -633,6 +637,18 @@ module.exports = {
   */
 
 	maxHeight: {
+		'4xs': '10rem',
+		'3xs': '15rem',
+		'2xs': '17.5rem',
+		xs: '20rem',
+		sm: '30rem',
+		md: '40rem',
+		lg: '50rem',
+		xl: '60rem',
+		'2xl': '70rem',
+		'3xl': '80rem',
+		'4xl': '90rem',
+		'5xl': '100rem',
 		full: '100%',
 		screen: '100vh'
 	},
@@ -660,7 +676,14 @@ module.exports = {
 		'3': '0.75rem',
 		'4': '1rem',
 		'6': '1.5rem',
-		'8': '2rem'
+		'8': '2rem',
+		'12': '3rem',
+		'16': '4rem',
+		'24': '6rem',
+		'32': '8rem',
+		'48': '12rem',
+		'64': '16rem',
+		'80': '20rem'
 	},
 
 	/*
@@ -693,7 +716,8 @@ module.exports = {
 		'24': '6rem',
 		'32': '8rem',
 		'48': '12rem',
-		'64': '16rem'
+		'64': '16rem',
+		'80': '20rem'
 	},
 
 	/*
