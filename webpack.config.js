@@ -24,8 +24,10 @@ const paths = {
 	CWD: path.resolve(__dirname),
 	DIST: path.resolve(__dirname, 'static'),
 	SRC: path.resolve(__dirname, 'src'),
-	SITE: path.resolve(__dirname, '../../src')
+	SITE: path.resolve(__dirname, '../..')
 };
+
+console.log('THE SITE IS', paths.SITE);
 
 // Custom PurgeCSS extractor for Tailwind that allows special characters in class names.
 class TailwindExtractor {
@@ -40,7 +42,7 @@ module.exports = {
 	entry: [
 		...glob.sync([
 			path.join(paths.SRC, 'js', '/**/*.{js,ts}'),
-			path.join(paths.SITE, 'js', '/**/*.{js,ts}')
+			path.join(paths.SITE, 'src', 'js', '/**/*.{js,ts}')
 		]),
 		path.join(paths.SRC, 'styles', 'main.css')
 		// This is imported directly from main.css for now. Revisit when Tailwind can use `@apply` for
@@ -101,7 +103,11 @@ module.exports = {
 				paths: glob.sync([
 					path.join(paths.CWD, 'layouts/**/*.html'),
 					path.join(paths.CWD, 'content/**/*.{md,html}'),
-					path.join(paths.SRC, 'js', '/**/*.{js,ts}')
+					path.join(paths.SRC, 'js', '/**/*.{js,ts}'),
+
+					path.join(paths.SITE, 'layouts/**/*.html'),
+					// path.join(paths.SITE, 'content/**/*.{md,html}'), TODO: This causes error! Why!
+					path.join(paths.SITE, 'src', 'js', '/**/*.{js,ts}')
 				]),
 				extractors: [
 					{
