@@ -48,6 +48,7 @@
 	left: 0;
 	top: 2.1em;
 	display: none;
+	z-index: 10;
 }
 
 .dropdown:hover .dropdown-menu {

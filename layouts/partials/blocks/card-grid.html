@@ -2,13 +2,7 @@
 	<div class="container mx-auto mt-12 flex flex-col items-center">
 		<div class="grid grid-columns-1 grid-gap-xs sm:grid-columns-{{ div .Params.num_cols 2 }} sm:grid-gap-sm lg:grid-columns-{{ .Params.num_cols }} lg:grid-gap-lg grid-justify-center">
 			{{ range .Params.cards }}
-				<div class="card max-w-2xs">
-					<div class="card-title rl-ctr-title-underline">{{ .title }}</div>
-					<p class="px-2 pb-8 text-center text-rl-gray">{{ .description }}</p>
-					<div class="text-center">
-						<a href="{{ .buttonUrl }}" class="red-btn-outline mx-auto">{{ .buttonText }}</a>
-					</div>
-				</div>
+				{{ partial "card" . }}
 			{{ end }}
 		</div>
 	</div>
