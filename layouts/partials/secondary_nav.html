@@ -4,7 +4,7 @@
             <div class="w-32 relative inline-block mr-2">
                 <nav id="ecosystem-nav">
                     <div class="dropdown">
-                        <div class="px-1 py-2 text-grey" @click="toggleMenu()">{{ i18n "ecosystem" }}</div>
+                        <div class="dropdown-header" @click="toggleMenu()">{{ i18n "ecosystem" }}</div>
                         <div class="dropdown-menu" :class="{ block: isMenuOpen }">
                             <ul class="submenu list-reset">
                                 {{ range .Site.Params.navigation.ecosystem -}}
@@ -20,7 +20,7 @@
                 <nav id="lang-nav">
                     <div class="dropdown">
                         {{ $home := .Site.Home }}
-                        <div class="px-1 py-2 text-grey" @click="toggleMenu()">{{- partial "icon" (dict "icon" .Lang) -}} {{ $home.Language.LanguageName }}</div>
+                        <div class="dropdown-header" @click="toggleMenu()">{{- partial "icon" (dict "icon" .Lang) -}} {{ $home.Language.LanguageName }}</div>
                         <div class="dropdown-menu" :class="{ block: isMenuOpen }">
                             <ul class="submenu list-reset">
                                 {{ range $home.Translations -}}
