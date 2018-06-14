@@ -5,7 +5,7 @@
                 <p class="font-semibold">{{ i18n "ecosystem" }}</p>
                 <ul class="list-reset">
                     {{ range .Site.Params.navigation.ecosystem -}}
-                        <li><a class="no-underline text-rl-gray dim" href="{{ .URL }}">{{ .Name }}</a></li>
+                        <li><a class="no-underline text-white dim" href="{{ .URL }}">{{ .Name }}</a></li>
                     {{ end }}
                 </ul>
             </div>
@@ -13,24 +13,23 @@
                 <p class="font-semibold">{{ i18n "about" }}</p>
                 <ul class="list-reset">
                     {{ range .Site.Menus.main -}}
-                        <li><a class="no-underline text-rl-gray dim" href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+                        <li><a class="no-underline text-white dim" href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
                     {{ end }}
                 </ul>
             </div>
             <div class="px-8 py-4">
                 <p>{{ i18n "subscribe" }}</p>
                 <input type="email" class="text-input" placeholder="you@abc.com">
-                <input type="submit" value="{{ i18n "submitBtn" }}" class="red-btn">
+                <input type="submit" value="{{ i18n "submitBtn" }}" class="btn btn-red">
             </div>
         </div>
         <div class="container mx-auto px-8 py-4">
             {{ range .Site.Params.navigation.social -}}
-                <a class="text-grey no-underline mr-4" href="{{ .URL }}" title="{{ .Name }}">{{ partial "icon" (dict "icon" .Identifier) }}</a>
+                <a class="text-white no-underline mr-4" href="{{ .URL }}" title="{{ .Name }}">{{ partial "icon" (dict "icon" .Identifier) }}</a>
             {{ end }}
-            <div class="my-4">{{ .Site.Params.CopyrightHTML | safeHTML }}</div>
-            <div class="mt-4 mb-8 text-grey opacity-25">Site by <a href="https://grayscale.digital" class="text-grey no-underline">Grayscale Digital</a></div>
+            <div class="my-4 text-grey">{{ .Site.Params.CopyrightHTML | safeHTML }}</div>
+            <div class="mt-4 mb-8 text-grey opacity-25"><a href="https://grayscale.digital" class="text-grey no-underline">Site by Grayscale Digital</a></div>
         </div>
     </footer>
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-<script src="{{ .Site.BaseURL }}{{ index .Site.Data.assetMap "vendor.js" }}"></script>
 <script src="{{ .Site.BaseURL }}{{ index .Site.Data.assetMap "main.js" }}"></script>

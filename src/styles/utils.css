@@ -14,42 +14,50 @@
 	transition: opacity 0.15s ease-out;
 }
 
-.red-btn {
-	@apply .inline-block .my-4 .py-2 .px-4 .min-w-3xs .rounded-full;
-	@apply .no-underline .bg-red .text-white .text-center .font-bold;
+.btn {
+	@apply .inline-block .my-4 .py-2 .px-4 .min-w-2xs .rounded-full .cursor-pointer;
+	@apply .no-underline .bg-grey .text-white .text-center .text-sm;
 }
 
-.red-btn:hover {
+.btn-red {
+	@apply .bg-red;
+}
+
+.btn-red:hover {
 	@apply .bg-red-dark;
 
 	transition: background-color 0.15s ease-out;
 }
 
-.red-btn:active {
+.btn-red:active {
 	opacity: 0.8;
 	transition: opacity 0.15s ease-out;
 }
 
-.red-btn-outline {
-	@apply .leading-normal .no-underline .whitespace-no-wrap .text-rl-red;
-	@apply .border .border-solid .rounded-full .border-rl-red;
+.btn-outline {
+	@apply .leading-normal .no-underline .whitespace-no-wrap .text-grey;
+	@apply .border .border-solid .rounded-full .border-grey;
 	@apply .px-6 .py-2;
 }
 
-.red-btn-outline:hover {
+.btn-outline-red {
+	@apply .text-rl-red .border-rl-red;
+}
+
+.btn-red-outline:hover {
 	@apply .border-red-dark;
 
 	transition: border-color 0.15s ease-out;
 	transition: color 0.15s ease-out;
 }
 
-.red-btn-outline:active {
+.btn-red-outline:active {
 	opacity: 0.8;
 	transition: opacity 0.15s ease-out;
 }
 
 .card {
-	@apply .w-full .rounded-lg .overflow-hidden .bg-white .shadow-lg .px-6 .py-8 .mb-8;
+	@apply .w-full .rounded-xl .overflow-hidden .bg-white .shadow-lg .px-6 .py-8 .mb-8;
 }
 
 .card-title {

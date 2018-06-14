@@ -20,7 +20,7 @@
             <p class="text-grey-darker text-base">{{ .Summary }}</p>
         </div>
         <p class="px-6 py-4 read-more-anchor">
-            <a class="red-btn-outline" href="{{ .RelPermalink | relLangURL }}">Read More</a>
+            <a class="btn-outline btn-outline-red" href="{{ .RelPermalink | relLangURL }}">Read More</a>
         </p>
         <div class="px-6 py-4">
             {{ range .Params.tags }}
