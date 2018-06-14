@@ -33,13 +33,14 @@
             <div class="card lg:min-w-xs">
                 <div class="card-title rl-ctr-title-underline">Top Tags</div>
                 <ul class="mb-4">
-                    {{ range $name, $items := .Site.Taxonomies.tags }}
-                        <li>
-                            <a class="no-underline text-rl-gray dim" href="{{ "tags/" | relLangURL }}{{ $name | urlize | lower }}" title="{{ $name | humanize }}">
-                                {{ $name | humanize | lower }}
-                                ({{ $items.Count }})
-                            </a>
-                        </li>
+                    {{ with .Site.Taxonomies.tags.ByCount }}
+                        {{ range first 5 . }}
+                            <li>
+                                <a class="no-underline text-rl-gray dim" href="{{ "tags/" | relLangURL }}{{ .Name | urlize | lower }}" title="{{ .Name | humanize }}">
+                                    {{- .Name | humanize | lower }} ({{ .Count -}})
+                                </a>
+                            </li>
+                        {{ end }}
                     {{ end }}
                 </ul>
                 <a href="/tags/" class="no-underline text-rl-gray dim">See all tags</a>
@@ -47,12 +48,5 @@
         </aside>
     </div>
 </section>
-
-<!-- <ul id="all-tags">
-    {{ range ($.Site.GetPage "taxonomyTerm" "tags").Pages }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title | lower }}</a></li>
-    {{ end }}
-</ul> -->
-
 
 {{ end }}
