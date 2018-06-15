@@ -13,10 +13,13 @@
 </head>
 <!-- margin bottom by footer height -->
 <body class="avenir bg-rl-gray-lighter mb-80 leading-tight">
+    <div id="app">
     {{ partial "secondary_nav" . }}
     {{ partial "nav" . }}
     {{ block "main" . }}
     {{ end }}
     {{ partial "footer" . }}
+    </div>
+    {{ partial "footer_includes" . }}
 </body>
 </html>
