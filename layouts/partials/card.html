@@ -1,12 +1,12 @@
-<div class="card max-w-2xs">
+<div class="card max-w-2xs flex flex-col justify-between">
 	{{ with .thumbnail }}
-		<div class="text-center">
+		<div class="text-center flex-none">
 			<div class="h-32 bg-center bg-no-repeat bg-contain" style="background-image: url('{{ . }}');"></div>
 		</div>
 	{{ end }}
-	<div class="card-title rl-ctr-title-underline">{{ .title }}</div>
-	<p class="px-2 pb-8 text-center text-rl-gray">{{ .description }}</p>
-	<div class="text-center">
+	<div class="card-title rl-ctr-title-underline flex-none">{{ .title }}</div>
+	<p class="px-2 pb-8 text-center text-rl-gray flex-grow">{{ .description }}</p>
+	<div class="text-center flex-none">
 		<a href="{{ .buttonUrl }}" class="btn-outline btn-outline-red mx-auto">{{ .buttonText }}</a>
 	</div>
 </div>

@@ -31,8 +31,20 @@
                 </div>
             </div>
             <div class="card lg:min-w-xs">
+                <div class="card-title rl-ctr-title-underline">Categories</div>
+                <ul class="list-reset mb-4 text-center">
+                    {{ range .Site.Taxonomies.category.Alphabetical }}
+                        <li>
+                            <a class="no-underline text-rl-gray dim" href="{{ "category/" | relLangURL }}{{ .Name | urlize | lower }}" title="{{ .Name | humanize }}">
+                                {{- .Name | humanize }}
+                            </a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+            <div class="card lg:min-w-xs">
                 <div class="card-title rl-ctr-title-underline">Top Tags</div>
-                <ul class="mb-4">
+                <ul class="list-reset mb-4 text-center">
                     {{ with .Site.Taxonomies.tags.ByCount }}
                         {{ range first 5 . }}
                             <li>
@@ -43,7 +55,9 @@
                         {{ end }}
                     {{ end }}
                 </ul>
-                <a href="/tags/" class="no-underline text-rl-gray dim">See all tags</a>
+                <div class="text-center">
+                    <a href="/tags/" class="no-underline text-rl-gray dim">See all tags</a>
+                </div>
             </div>
         </aside>
     </div>

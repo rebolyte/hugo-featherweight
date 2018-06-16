@@ -10,6 +10,8 @@ subscribe:
   other: Souscrire
 submitBtn:
   other: Envoyer
+category:
+  other: Catégorie
 postedTo:
   other: 'Cet article a aussi été publié sur:'
 twitterShare:

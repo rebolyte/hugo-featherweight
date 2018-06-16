@@ -33,7 +33,9 @@
 .nav-cta {
 	@apply .text-lg .leading-normal .no-underline .whitespace-no-wrap .text-rl-red;
 	@apply .border .border-solid .rounded-full .border-rl-red;
-	@apply .px-6 .py-2;
+	@apply .px-6 .py-2 .inline-block .text-center;
+
+	min-width: 12.5rem;
 }
 
 /* .nav-cta:hover {

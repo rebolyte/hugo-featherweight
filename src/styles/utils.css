@@ -35,9 +35,9 @@
 }
 
 .btn-outline {
-	@apply .leading-normal .no-underline .whitespace-no-wrap .text-grey;
+	@apply .leading-normal .no-underline .whitespace-no-wrap .text-center .text-grey;
 	@apply .border .border-solid .rounded-full .border-grey;
-	@apply .px-6 .py-2;
+	@apply .inline-block .px-6 .py-2 .min-w-2xs;
 }
 
 .btn-outline-red {

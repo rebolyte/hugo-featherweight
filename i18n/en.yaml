@@ -10,6 +10,8 @@ subscribe:
   other: Stay Updated on Red
 submitBtn:
   other: Submit
+category:
+  other: Category
 postedTo:
   other: 'This article has also been posted to:'
 twitterShare:

@@ -141,7 +141,9 @@ let colors = {
 
 	// fullstack
 	'rl-golden': '#eec862',
-	'rl-golden-darker': '#d99733'
+	'rl-golden-darker': '#d99733',
+	'rl-green': '#4cc29e',
+	'rl-green-darker': '#509e86'
 };
 
 module.exports = {
@@ -305,7 +307,7 @@ module.exports = {
 
 	leading: {
 		none: 1,
-		tight: 1.25,
+		tight: 1.375,
 		normal: 1.5,
 		loose: 2
 	},
@@ -576,10 +578,12 @@ module.exports = {
 
 	minHeight: {
 		'0': '0',
+		'5xs': '2.5rem',
 		'4xs': '5rem',
 		'3xs': '8rem',
 		'2xs': '10rem',
 		xs: '20rem',
+		xsm: '25rem',
 		sm: '30rem',
 		md: '40rem',
 		lg: '50rem',
