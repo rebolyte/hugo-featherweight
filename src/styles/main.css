@@ -53,7 +53,20 @@
 	font-family: 'avenirMedium', sans-serif;
 }
 
+.avenir-light {
+	font-family: 'avenirLight', sans-serif;
+}
+
+.avenir-book {
+	font-family: 'avenirBook', sans-serif;
+}
+
 .avenir-heavy {
+	font-family: 'avenirHeavy', sans-serif;
+}
+
+/* TODO */
+.avenir-black {
 	font-family: 'avenirHeavy', sans-serif;
 }
 

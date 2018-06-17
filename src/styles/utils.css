@@ -61,7 +61,7 @@
 }
 
 .card-title {
-	@apply .font-bold .text-xl .mb-2 .text-center .text-rl-gray;
+	@apply .avenir-black .font-bold .text-xl .mb-2 .text-center .text-rl-gray;
 }
 
 .text-input {

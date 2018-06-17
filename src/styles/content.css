@@ -20,6 +20,8 @@
 .content h4,
 .content h5,
 .content h6 {
+	@apply .avenir-black;
+
 	margin: 1rem 0 0.5rem 0;
 }
 
