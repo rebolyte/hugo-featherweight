@@ -12,6 +12,8 @@ submitBtn:
   other: Submit
 category:
   other: Category
+contact:
+  other: Contact Us
 postedTo:
   other: 'This article has also been posted to:'
 twitterShare:
