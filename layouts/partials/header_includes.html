@@ -1,4 +1,6 @@
-<link rel="stylesheet" href="{{ .Site.BaseURL }}{{ index .Site.Data.assetMap "main.css" }}">
+{{ if (fileExists "themes/featherweight/data/assetMap.json") -}}
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}{{ index .Site.Data.assetMap "main.css" }}">
+{{- end }}
 {{ if eq .Section "blog" }}
     <!-- section-specific includes -->
 {{ end }}
