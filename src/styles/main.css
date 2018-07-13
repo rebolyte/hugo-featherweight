@@ -127,3 +127,11 @@
 	height: 4px;
 	background-color: config('colors.rl-red');
 }
+
+a.content-li {
+	@apply .block .py-2 .no-underline;
+}
+
+a.content-li:not(:last-child) {
+	@apply .border-b .border-rl-gray;
+}

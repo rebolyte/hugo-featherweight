@@ -2,7 +2,7 @@
 
 Base Hugo theme for websites related to the Red language.
 
-### Add theme as submodule
+### Add theme as submodule to new site
 
 In your website root:
 
