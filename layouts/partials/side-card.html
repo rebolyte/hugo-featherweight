@@ -1,17 +1,17 @@
-{{- $hasButton := (and (isset .page "button_text") (isset .page "button_url")) -}}
+{{- $hasButton := (and (isset . "button_text") (isset . "button_url")) -}}
 <article class="max-w-lg w-full min-h-xs lg:flex mb-8 rounded-xl shadow-lg">
 	{{ with .thumbnail }}
 		<div class="h-48 lg:h-auto lg:w-64 flex-none bg-cover rounded-t-xl lg:rounded-t-none lg:rounded-l-xl text-center overflow-hidden" style="background-image: url('{{ . }}');">
 		</div>
 	{{ end }}
-	<div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b-xl lg:rounded-b-none lg:rounded-r-xl px-4 flex flex-col justify-between leading-normal">
+	<div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b-xl lg:rounded-b-none lg:rounded-r-xl px-4 flex flex-col flex-grow justify-between leading-normal">
 		<div class="px-8 pt-8 pb-4">
-			<div class="mb-2"><a class="avenir-black font-bold text-grey-darker text-2xl no-underline rl-l-title-underline" href="{{ .button_url | relLangURL }}">{{ .title }}</a></div>
+			<div class="mb-2"><a class="avenir-black font-bold text-grey-darker text-2xl no-underline rl-l-title-underline" href="{{ .button_url  }}">{{ .title }}</a></div>
 			<p class="text-grey-darker text-base">{{ .description | markdownify }}</p>
 		</div>
 		{{- if $hasButton -}}
 		<div class="px-8 pt-4 pb-8">
-			<a class="btn-outline btn-outline-red" href="{{ .button_url | relLangURL }}">{{ .button_text }}</a>
+			<a class="btn-outline btn-outline-red" href="{{ .button_url  }}">{{ .button_text }}</a>
 		</div>
 		{{- end -}}
 	</div>
