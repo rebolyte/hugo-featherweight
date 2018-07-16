@@ -183,6 +183,7 @@ module.exports = {
   */
 
 	screens: {
+		mobile: { max: '768px' },
 		sm: '576px',
 		md: '768px',
 		lg: '992px',
