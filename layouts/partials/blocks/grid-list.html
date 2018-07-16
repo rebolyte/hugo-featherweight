@@ -1,13 +1,21 @@
-<section class="py-4">
-    <div class="container mx-auto mt-12 flex flex-col items-center">
-        <div class="grid grid-columns-1 grid-gap-xs sm:grid-columns-2 sm:grid-gap-sm lg:grid-columns-4 lg:grid-gap-lg grid-justify-center">
-            {{ range .Params.grid_items }}
-                <div class="w-64 h-32 py-1">
+<div class="container mx-auto">
+    {{- $num := (int .Params.num_cols) -}}
+    {{/* printf "%#v" $num */}}
+    {{/* printf "%T" $num */}}
+    <div class="grid grid-columns-2 grid-gap-xs sm:grid-columns-{{ div $num 2 }} sm:grid-gap-sm lg:grid-columns-{{ .Params.num_cols }} lg:grid-gap-md">
+        {{ range .Params.grid_items }}
+            <div class="p-2">
+                {{/* TODO: icon */}}
+                {{ if (isset . "icon") }}
+                    <img class="h-12 w-12 mx-auto rounded-full block bg-cover bg-center bg-no-repeat" style="background-image: url('{{ .icon }}');">
+                {{ else }}
                     <div class="h-12 w-12 mx-auto rounded-full bg-teal"></div>
-                    <h4 class="text-center text-lg text-rl-gray rl-ctr-title-underline mt-4">{{ .title }}</h4>
-                    <p class="px-2 text-center text-rl-gray">{{ .description }}</p>
-                </div>
-            {{ end }}
-        </div>
+                {{ end }}
+                {{- with .title -}}
+                    <h4 class="text-center text-lg text-rl-gray rl-ctr-title-underline mt-4">{{ . }}</h4>
+                {{- end -}}
+                <p class="pt-2 text-center text-rl-gray">{{ .description }}</p>
+            </div>
+        {{ end }}
     </div>
-</section>
+</div>
