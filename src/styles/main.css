@@ -136,6 +136,7 @@ a.content-li:not(:last-child) {
 	@apply .border-b .border-rl-gray;
 }
 
+/* http://embedresponsively.com/ */
 .embed-container {
 	position: relative;
 	padding-bottom: 56.25%;
