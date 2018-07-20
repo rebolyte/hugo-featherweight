@@ -154,3 +154,11 @@ a.content-li:not(:last-child) {
 	width: 100%;
 	height: 100%;
 }
+
+.bg-green-gradient {
+	background-image: linear-gradient(
+		to left,
+		config('colors.rl-green'),
+		config('colors.rl-green-darker')
+	);
+}
