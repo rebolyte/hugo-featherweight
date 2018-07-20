@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}" class="relative min-h-full"> <!-- sticky footer styles -->
+<html lang="{{ .Site.Language.Lang }}" class="h-full">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +11,18 @@
 	{{ end }}</title>
     {{ partial "header_includes" . }}
 </head>
-<!-- margin bottom by footer height -->
-<body class="avenir bg-rl-gray-lighter mb-80 leading-tight">
-    <div id="app">
+<body class="avenir bg-rl-gray-lighter leading-tight h-full">
+
+<div id="app" class="flex flex-col min-h-full">
     {{ partial "secondary_nav" . }}
     {{ partial "nav" . }}
-    {{ block "main" . }}
-    {{ end }}
-    {{ partial "footer" . }}
+    <div class="flex-1">
+        {{ block "main" . }}
+        {{ end }}
     </div>
-    {{ partial "footer_includes" . }}
+    {{ partial "footer" . }}
+</div>
+{{ partial "footer_includes" . }}
+
 </body>
 </html>
