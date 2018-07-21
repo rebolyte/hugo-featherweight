@@ -53,5 +53,15 @@
 <title>facebook-square</title>
 <path d="M19.5 2c2.484 0 4.5 2.016 4.5 4.5v15c0 2.484-2.016 4.5-4.5 4.5h-2.938v-9.297h3.109l0.469-3.625h-3.578v-2.312c0-1.047 0.281-1.75 1.797-1.75l1.906-0.016v-3.234c-0.328-0.047-1.469-0.141-2.781-0.141-2.766 0-4.672 1.687-4.672 4.781v2.672h-3.125v3.625h3.125v9.297h-8.313c-2.484 0-4.5-2.016-4.5-4.5v-15c0-2.484 2.016-4.5 4.5-4.5h15z"></path>
 </symbol>
+<symbol id="red-logo-bg" viewBox="0 0 438 318">
+<g opacity="0.2">
+<path d="M59 124V0L0 91.8185L59 124Z" transform="translate(160)" fill="#2F3B55"/>
+<path d="M0 40.3252V160L138 88.4553L77.8294 0L0 40.3252Z" transform="translate(219 116)" fill="#232537"/>
+<path d="M0 124L59 91.8185L0 0V124Z" transform="translate(219)" fill="#232537"/>
+<path d="M157.945 0L0 82.2188V204L219 90.1755L157.945 0Z" transform="translate(219 233)" fill="#232537"/>
+<path d="M0 90.1755L219 204V82.2188L61.0545 0L0 90.1755Z" transform="translate(0 233)" fill="#2F3B55"/>
+<path d="M60.1706 0L0 88.4553L138 160V40.3252L60.1706 0Z" transform="translate(80 116)" fill="#2F3B55"/>
+</g>
+</symbol>
 </defs>
 </svg>
