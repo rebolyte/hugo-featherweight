@@ -1,10 +1,14 @@
 <div class="card max-w-2xs flex flex-col justify-between">
 	{{ with .thumbnail }}
 		<div class="text-center flex-none">
-			<div class="h-32 bg-center bg-no-repeat bg-contain" style="background-image: url('{{ . }}');"></div>
+			<a href="{{ $.buttonUrl }}" class="no-underline">
+				<div class="h-32 bg-center bg-no-repeat bg-contain" style="background-image: url('{{ . }}');"></div>
+			</a>
 		</div>
 	{{ end }}
-	<div class="card-title rl-ctr-title-underline flex-none">{{ .title }}</div>
+	<div class="card-title rl-ctr-title-underline flex-none">
+		<a href="{{ .buttonUrl }}" class="no-underline text-rl-gray">{{ .title }}</a>
+	</div>
 	<p class="px-2 pb-8 text-center text-rl-gray flex-grow">{{ .description }}</p>
 	<div class="text-center flex-none">
 		<a href="{{ .buttonUrl }}" class="btn-outline btn-outline-red mx-auto">{{ .buttonText }}</a>
