@@ -8,12 +8,14 @@
             <h3 class="font-semibold text-2xl text-rl-gray rl-l-title-underline">{{ markdownify . }}</h3>
             {{- end -}}
             {{- with .Params.content -}}
-            <p class="text-rl-gray">{{ markdownify . }}</p>
+            <div class="text-grey-darker content">
+                {{ markdownify . }}
+            </div>
             {{- end -}}
         </div>
         <div class="px-2 md:px-8 py-4">
             {{ if isset .Params "image" }}
-                <img  class="rounded-xl shadow-blurred" src="{{ relURL .Params.image }}" />
+                <img class="rounded-xl shadow-blurred" src="{{ relURL .Params.image }}" />
             {{ end }}
         </div>
     </div>

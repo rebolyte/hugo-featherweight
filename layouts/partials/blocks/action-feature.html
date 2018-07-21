@@ -1,5 +1,5 @@
 {{- $hasImage := and (isset .Params "image") (isset .Params "image_position") -}}
-<section class="py-12 md:py-24 ">
+<section class="py-4">
     <div class="container mx-auto px-2 md:px-8 md:flex {{ if not $hasImage }}items-center text-center max-w-sm{{ end }}
     {{- with .Params.image_position -}}
         {{- if eq "left" . }} flex-row-reverse{{- end -}}
@@ -9,13 +9,15 @@
             <h3 class="mb-6 font-semibold text-3xl text-white">{{ markdownify . }}</h3>
             {{- end -}}
             {{- with .Params.content -}}
-            <p class="mb-4 text-rl-gray">{{ markdownify . }}</p>
+            <div class="mb-4 text-rl-gray content">
+                {{ markdownify . }}
+            </div>
             {{- end -}}
             <a class="btn btn-red" href="{{ .Params.button_url }}">{{ .Params.button_text }}</a>
         </div>
         {{ if $hasImage }}
         <div class="px-2 md:px-8 py-4 flex-1 text-center">
-            <img class="shadow-blurred" src="{{ relURL .Params.image }}" />
+            <img class="rounded-xl shadow-blurred" src="{{ relURL .Params.image }}" />
         </div>
         {{ end }}
     </div>
