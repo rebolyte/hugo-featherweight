@@ -21,7 +21,5 @@ new Vue({
 	data: {
 		isMainMenuOpen: false
 	},
-	components: {
-		...comps.default
-	}
+	components: Object.assign({}, comps.default)
 });

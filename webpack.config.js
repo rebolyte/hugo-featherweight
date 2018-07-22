@@ -55,9 +55,9 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.ts$/,
+				test: /\.js$/,
 				exclude: /node_modules/,
-				use: ['ts-loader']
+				use: ['babel-loader']
 			},
 			{
 				test: /\.s?css$/,
