@@ -1,5 +1,8 @@
 import Vue from 'vue';
 
+// import site components
+import * as comps from '../../../../src/js/components';
+
 Vue.component('accordion-toggle', {
 	// &#x25B2; // up
 	// &#x25BC; // down
@@ -17,5 +20,8 @@ new Vue({
 	el: '#app',
 	data: {
 		isMainMenuOpen: false
+	},
+	components: {
+		...comps.default
 	}
 });
