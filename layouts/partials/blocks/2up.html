@@ -4,14 +4,14 @@
 			<h3 class="px-2 md:px-8 font-semibold text-2xl text-rl-gray rl-l-title-underline">{{ markdownify . }}</h3>
 		{{- end -}}
 		<div class="grid grid-columns-1 md:grid-columns-2">
-			<div class="px-2 md:px-8 py-4 text-rl-gray">
+			<div class="px-2 md:px-8 py-4 text-grey-darker content">
 				{{- with .Params.left -}}
-					<p>{{ markdownify . }}</p>
+					{{ markdownify . }}
 				{{- end -}}
 			</div>
 			{{- with .Params.right -}}
-				<div class="px-2 md:px-8 py-4 text-rl-gray">
-					<p>{{ markdownify . }}</p>
+				<div class="px-2 md:px-8 py-4 text-grey-darker content">
+					{{ markdownify . }}
 				</div>
 			{{- end -}}
 		</div>
