@@ -14,7 +14,9 @@
 				<span class="avenir-black font-bold text-rl-gray text-2xl rl-l-title-underline">{{ .title }}</span>
 				{{- end -}}
 			</div>
-			<p class="text-grey-darker text-base">{{ .description | markdownify }}</p>
+			<div class="text-grey-darker text-base content {{ if not $hasButton }}mb-4{{ end }}">
+				{{ .description | markdownify }}
+			</div>
 		</div>
 		{{- if $hasButton -}}
 		<div class="px-8 pt-4 pb-8">
